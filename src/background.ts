@@ -1,7 +1,5 @@
 import { browser, Tabs } from 'webextension-polyfill-ts';
 
-console.info('Reload all tabs web ext has loaded');
-
 function getCurrentWindowTabs(): Promise<Tabs.Tab[]>
 {
   // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query#Parameters

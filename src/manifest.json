@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "reload-all-tabs-web-ext",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Reload all tabs",
   "browser_action": {
     "default_icon": "icons/iconfinder_refresh_3688457.svg",
@@ -11,5 +11,12 @@
     "scripts": [
       "background.js"
     ]
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Alt+R"
+      }
+    }
   }
 }

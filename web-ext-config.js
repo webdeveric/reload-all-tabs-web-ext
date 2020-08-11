@@ -8,7 +8,10 @@ module.exports = {
     overwriteDest: true,
   },
   run: {
-    startUrl: [ 'about:debugging' ],
+    startUrl: [
+      'about:debugging',
+      'https://webdeveric.com/',
+    ],
   },
   ignoreFiles: [ 'package-lock.json' ],
 };
