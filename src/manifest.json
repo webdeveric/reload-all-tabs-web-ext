@@ -1,11 +1,13 @@
 {
   "manifest_version": 2,
-  "name": "reload-all-tabs-web-ext",
+  "name": "Reload All Tabs",
   "version": "0.2.0",
-  "description": "Reload all tabs",
+  "description": "Reload all visible tabs in the current window",
+  "author": "Eric King",
+  "homepage_url": "https://github.com/webdeveric/reload-all-tabs-web-ext",
   "browser_action": {
     "default_icon": "icons/iconfinder_refresh_3688457.svg",
-    "default_title": "Reload all tabs"
+    "default_title": "Reload All Tabs"
   },
   "background": {
     "scripts": [

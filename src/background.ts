@@ -1,4 +1,15 @@
-import { browser, Tabs } from 'webextension-polyfill-ts';
+import {
+  browser, Tabs, Manifest,
+} from 'webextension-polyfill-ts';
+
+function logManifestDetails( { name, version, author, homepage_url }: Manifest.ManifestBase ) : void
+{
+  console.groupCollapsed( name );
+  console.log(`Version: ${version}`);
+  console.log(`Author: ${author}`);
+  console.log(`Homepage: ${homepage_url}`);
+  console.groupEnd();
+}
 
 function getCurrentWindowTabs(): Promise<Tabs.Tab[]>
 {
@@ -10,12 +21,12 @@ function getCurrentWindowTabs(): Promise<Tabs.Tab[]>
   });
 }
 
-function reloadTab( tab: Tabs.Tab )
+function reloadTab( tab: Tabs.Tab ) : void
 {
   browser.tabs.reload(tab.id, { bypassCache: true });
 }
 
-async function reloadAllTabs()
+async function reloadAllTabs() : Promise<void>
 {
   const tabs: Tabs.Tab[] = await getCurrentWindowTabs();
 
@@ -23,3 +34,5 @@ async function reloadAllTabs()
 }
 
 browser.browserAction.onClicked.addListener( reloadAllTabs );
+
+logManifestDetails( browser.runtime.getManifest() );
