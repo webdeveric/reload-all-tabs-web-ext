@@ -18,7 +18,7 @@
     "_execute_browser_action": {
       "suggested_key": {
         "default": "Alt+Shift+R",
-        "mac": "Ctrl+Shift+R"
+        "mac": "Ctrl+MacCtrl+R"
       }
     }
   }
