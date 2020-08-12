@@ -11,6 +11,7 @@ module.exports = {
     startUrl: [
       'about:debugging',
       'https://webdeveric.com/',
+      'https://github.com/webdeveric/reload-all-tabs-web-ext',
     ],
   },
   ignoreFiles: [ 'package-lock.json' ],
