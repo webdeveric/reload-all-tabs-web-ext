@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "private": true,
   "description": "Reload all tabs web extension",
+  "homepage": "https://github.com/webdeveric/reload-all-tabs-web-ext",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./*.js ./*.ts ./src --ext .ts --ext .js --fix",
