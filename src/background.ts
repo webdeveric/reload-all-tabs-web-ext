@@ -11,14 +11,23 @@ function logManifestDetails( { name, version, author, homepage_url }: Manifest.M
   console.groupEnd();
 }
 
-function getCurrentWindowTabs(): Promise<Tabs.Tab[]>
+/**
+ * @see https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query#Parameters
+ */
+async function getCurrentWindowTabs(): Promise<Tabs.Tab[]>
 {
-  // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query#Parameters
-  return browser.tabs.query({
-    currentWindow: true,
-    hidden: false,
-    windowType: 'normal',
-  });
+  try {
+    return await browser.tabs.query({
+      currentWindow: true,
+      hidden: false,
+      windowType: 'normal',
+    });
+  } catch ( error ) {
+    return await browser.tabs.query({
+      currentWindow: true,
+      windowType: 'normal',
+    });
+  }
 }
 
 function reloadTab( tab: Tabs.Tab ) : void

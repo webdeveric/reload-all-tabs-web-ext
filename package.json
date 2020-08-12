@@ -6,12 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./*.js ./*.ts ./src --ext .ts --ext .js --fix",
+    "web-ext-lint": "web-ext lint",
     "web-ext": "web-ext build",
     "dev": "NODE_ENV=development webpack --watch",
     "prebuild": "npm run lint",
     "build": "NODE_ENV=production webpack",
     "postbuild": "npm run web-ext",
-    "start": "web-ext run",
+    "start": "web-ext run -t firefox-desktop -t chromium",
     "presign": "npm run build",
     "sign": "web-ext sign"
   },
