@@ -1,5 +1,5 @@
 import {
-  browser, Tabs, Manifest,
+  browser, Manifest, Tabs,
 } from 'webextension-polyfill-ts';
 
 function logManifestDetails( { name, version, author, homepage_url }: Manifest.ManifestBase ) : void
