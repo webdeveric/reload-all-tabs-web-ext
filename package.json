@@ -15,7 +15,8 @@
     "postbuild": "npm run web-ext",
     "start": "web-ext run -t firefox-desktop -t chromium",
     "presign": "npm run build",
-    "sign": "web-ext sign"
+    "sign": "web-ext sign",
+    "version": "sync-package-version ./src/manifest.json | xargs git add"
   },
   "keywords": [
     "Reload",
@@ -27,10 +28,11 @@
   "dependencies": {},
   "devDependencies": {
     "@types/copy-webpack-plugin": "^6.0.0",
-    "@types/node": "^14.11.5",
+    "@types/node": "^14.11.7",
     "@types/webpack": "^4.41.22",
     "@typescript-eslint/eslint-plugin": "^4.4.0",
     "@typescript-eslint/parser": "^4.4.0",
+    "@webdeveric/sync-package-version": "^0.2.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.2.0",
     "eslint": "^7.10.0",
