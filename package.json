@@ -28,19 +28,19 @@
   "dependencies": {},
   "devDependencies": {
     "@types/copy-webpack-plugin": "^6.2.0",
-    "@types/node": "^14.14.9",
+    "@types/node": "^14.14.11",
     "@types/webpack": "^4.41.24",
     "@webdeveric/eslint-config-ts": "^0.1.1",
     "@webdeveric/sync-package-version": "^0.3.0",
     "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^6.3.2",
-    "eslint": "^7.12.1",
+    "copy-webpack-plugin": "^6.4.0",
+    "eslint": "^7.15.0",
     "ts-loader": "^8.0.9",
-    "ts-node": "^9.0.0",
+    "ts-node": "^9.1.1",
     "typescript": "^4.1.2",
-    "web-ext": "^5.4.0",
+    "web-ext": "^5.4.1",
     "webextension-polyfill-ts": "^0.22.0",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "webpack": "^5.10.0",
+    "webpack-cli": "^4.2.0"
   }
 }
