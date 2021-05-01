@@ -32,7 +32,7 @@
     "@webdeveric/eslint-config-ts": "^0.1.1",
     "@webdeveric/sync-package-version": "^0.3.0",
     "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^8.1.0",
+    "copy-webpack-plugin": "^8.1.1",
     "eslint": "^7.23.0",
     "ts-loader": "^8.1.0",
     "ts-node": "^9.1.1",
