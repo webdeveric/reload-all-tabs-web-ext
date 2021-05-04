@@ -16,6 +16,7 @@
     "start": "web-ext run -t firefox-desktop -t chromium",
     "presign": "npm run build",
     "sign": "web-ext sign",
+    "spellcheck": "cspell --no-progress './src/**/*.{ts,json}' './*.{md,js,ts}' './package.json'",
     "version": "sync-package-version ./src/manifest.json | xargs git add"
   },
   "keywords": [
@@ -25,16 +26,16 @@
   ],
   "author": "Eric King <eric@webdeveric.com>",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
-    "@types/copy-webpack-plugin": "^6.4.1",
-    "@types/node": "^14.14.37",
+    "@types/copy-webpack-plugin": "^8.0.0",
+    "@types/node": "^15.0.1",
     "@webdeveric/eslint-config-ts": "^0.1.1",
     "@webdeveric/sync-package-version": "^0.3.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^8.1.0",
+    "cspell": "^5.3.12",
     "eslint": "^7.23.0",
-    "ts-loader": "^8.1.0",
+    "ts-loader": "^9.1.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3",
     "web-ext": "^6.0.0",
