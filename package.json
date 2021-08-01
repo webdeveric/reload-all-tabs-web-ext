@@ -28,7 +28,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/copy-webpack-plugin": "^8.0.0",
-    "@types/node": "^15.0.1",
+    "@types/node": "^16.4.10",
     "@webdeveric/eslint-config-ts": "^0.1.2",
     "@webdeveric/sync-package-version": "^0.3.0",
     "clean-webpack-plugin": "^3.0.0",
@@ -39,7 +39,7 @@
     "ts-node": "^10.0.0",
     "typescript": "^4.2.3",
     "web-ext": "^6.2.0",
-    "webextension-polyfill-ts": "^0.25.0",
+    "webextension-polyfill-ts": "^0.26.0",
     "webpack": "^5.38.0",
     "webpack-cli": "^4.6.0"
   }
