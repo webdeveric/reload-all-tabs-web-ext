@@ -27,7 +27,7 @@
   "author": "Eric King <eric@webdeveric.com>",
   "license": "ISC",
   "devDependencies": {
-    "@types/copy-webpack-plugin": "^8.0.0",
+    "@types/copy-webpack-plugin": "^8.0.1",
     "@types/node": "^15.0.1",
     "@webdeveric/eslint-config-ts": "^0.1.2",
     "@webdeveric/sync-package-version": "^0.3.0",
