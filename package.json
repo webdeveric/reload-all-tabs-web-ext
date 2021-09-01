@@ -29,7 +29,7 @@
   "devDependencies": {
     "@types/copy-webpack-plugin": "^8.0.0",
     "@types/node": "^16.4.10",
-    "@webdeveric/eslint-config-ts": "^0.1.2",
+    "@webdeveric/eslint-config-ts": "^0.3.0",
     "@webdeveric/sync-package-version": "^0.3.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^9.0.0",
