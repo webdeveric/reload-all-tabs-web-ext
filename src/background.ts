@@ -2,6 +2,7 @@ import {
   browser, Manifest, Tabs,
 } from 'webextension-polyfill-ts';
 
+// eslint-disable-next-line @typescript-eslint/naming-convention
 function logManifestDetails( { name, version, author, homepage_url }: Manifest.ManifestBase ) : void
 {
   console.groupCollapsed( name );
