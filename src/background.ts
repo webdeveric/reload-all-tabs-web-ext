@@ -2,10 +2,14 @@ import {
   browser, Manifest, Tabs,
 } from 'webextension-polyfill-ts';
 
-// eslint-disable-next-line @typescript-eslint/naming-convention
-function logManifestDetails( { name, version, author, homepage_url }: Manifest.ManifestBase ) : void
-{
-  console.groupCollapsed( name );
+function logManifestDetails({
+  name,
+  version,
+  author,
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  homepage_url,
+}: Manifest.ManifestBase): void {
+  console.groupCollapsed(name);
   console.log(`Version: ${version}`);
   console.log(`Author: ${author}`);
   console.log(`Homepage: ${homepage_url}`);
@@ -15,15 +19,14 @@ function logManifestDetails( { name, version, author, homepage_url }: Manifest.M
 /**
  * @see https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query#Parameters
  */
-async function getCurrentWindowTabs(): Promise<Tabs.Tab[]>
-{
+async function getCurrentWindowTabs(): Promise<Tabs.Tab[]> {
   try {
     return await browser.tabs.query({
       currentWindow: true,
       hidden: false,
       windowType: 'normal',
     });
-  } catch ( error ) {
+  } catch {
     return await browser.tabs.query({
       currentWindow: true,
       windowType: 'normal',
@@ -31,18 +34,16 @@ async function getCurrentWindowTabs(): Promise<Tabs.Tab[]>
   }
 }
 
-function reloadTab( tab: Tabs.Tab ) : void
-{
+function reloadTab(tab: Tabs.Tab): void {
   browser.tabs.reload(tab.id, { bypassCache: true });
 }
 
-async function reloadAllTabs() : Promise<void>
-{
+async function reloadAllTabs(): Promise<void> {
   const tabs: Tabs.Tab[] = await getCurrentWindowTabs();
 
-  tabs.forEach( tab => reloadTab( tab ) );
+  tabs.forEach(tab => reloadTab(tab));
 }
 
-browser.browserAction.onClicked.addListener( reloadAllTabs );
+browser.browserAction.onClicked.addListener(reloadAllTabs);
 
-logManifestDetails( browser.runtime.getManifest() );
+logManifestDetails(browser.runtime.getManifest());
