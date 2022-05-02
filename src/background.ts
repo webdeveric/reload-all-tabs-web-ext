@@ -1,6 +1,4 @@
-import {
-  browser, Manifest, Tabs,
-} from 'webextension-polyfill-ts';
+import browser, { Manifest, Tabs } from 'webextension-polyfill';
 
 function logManifestDetails({
   name,
