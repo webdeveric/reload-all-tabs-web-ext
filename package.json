@@ -27,7 +27,7 @@
   "author": "Eric King <eric@webdeveric.com>",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^17.0.7",
+    "@types/node": "^17.0.31",
     "@types/webextension-polyfill": "^0.8.3",
     "@webdeveric/eslint-config-ts": "^0.4.1",
     "@webdeveric/sync-package-version": "^0.3.0",
