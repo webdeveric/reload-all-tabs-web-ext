@@ -33,7 +33,7 @@
     "@webdeveric/sync-package-version": "^0.3.0",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^10.0.0",
-    "cspell": "^5.3.12",
+    "cspell": "^6.1.0",
     "eslint": "^8.1.0",
     "ts-loader": "^9.1.1",
     "ts-node": "^10.2.1",
