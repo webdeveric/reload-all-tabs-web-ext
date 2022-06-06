@@ -5,8 +5,10 @@
     "postbuild",
     "prebuild",
     "presign",
+    "typecheck",
     "webdeveric",
     "webextension",
+    "webextensions",
     "xargs"
   ],
   "ignorePaths": [

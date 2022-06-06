@@ -32,14 +32,14 @@ async function getCurrentWindowTabs(): Promise<Tabs.Tab[]> {
   }
 }
 
-function reloadTab(tab: Tabs.Tab): void {
-  browser.tabs.reload(tab.id, { bypassCache: true });
+async function reloadTab(tab: Tabs.Tab): Promise<void> {
+  await browser.tabs.reload(tab.id, { bypassCache: true });
 }
 
 async function reloadAllTabs(): Promise<void> {
   const tabs: Tabs.Tab[] = await getCurrentWindowTabs();
 
-  tabs.forEach(tab => reloadTab(tab));
+  await Promise.allSettled(tabs.map(tab => reloadTab(tab)));
 }
 
 browser.browserAction.onClicked.addListener(reloadAllTabs);

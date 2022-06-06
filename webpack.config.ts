@@ -1,19 +1,20 @@
-import * as path from 'path';
-import * as webpack from 'webpack';
+import { join, resolve } from 'node:path';
+
+import type { Configuration } from 'webpack';
 
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 
 const isProd: boolean = process.env.NODE_ENV === 'production';
 
-const config: webpack.Configuration = {
+const config: Configuration = {
   mode: isProd ? 'production' : 'development',
   devtool: false,
   entry: {
     background: './src/background',
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: resolve(__dirname, 'dist'),
     filename: '[name].js',
   },
   module: {
@@ -33,12 +34,12 @@ const config: webpack.Configuration = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src', 'manifest.json'),
-          to: path.join(__dirname, 'dist', 'manifest.json'),
+          from: resolve(__dirname, 'src', 'manifest.json'),
+          to: join(__dirname, 'dist', 'manifest.json'),
         },
         {
-          from: path.join(__dirname, 'src', 'icons'),
-          to: path.join(__dirname, 'dist', 'icons'),
+          from: join(__dirname, 'src', 'icons'),
+          to: join(__dirname, 'dist', 'icons'),
         },
       ],
     }),
