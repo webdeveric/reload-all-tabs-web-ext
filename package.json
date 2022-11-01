@@ -35,7 +35,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "cspell": "^6.1.1",
-    "eslint": "^8.18.0",
+    "eslint": "^8.26.0",
     "ts-loader": "^9.1.1",
     "ts-node": "^10.2.1",
     "typescript": "^4.7.4",
