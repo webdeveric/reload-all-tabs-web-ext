@@ -1,9 +1,11 @@
 import { join, resolve } from 'node:path';
 
-import type { Configuration } from 'webpack';
 
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+// eslint-disable-next-line @typescript-eslint/naming-convention
 import CopyPlugin from 'copy-webpack-plugin';
+
+import type { Configuration } from 'webpack';
 
 const isProd: boolean = process.env.NODE_ENV === 'production';
 
