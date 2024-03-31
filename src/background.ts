@@ -42,6 +42,8 @@ async function reloadAllTabs(): Promise<void> {
   await Promise.allSettled(tabs.map(tab => reloadTab(tab)));
 }
 
-browser.browserAction.onClicked.addListener(reloadAllTabs);
+browser.browserAction.onClicked.addListener(() => {
+  reloadAllTabs().catch(console.error);
+});
 
 logManifestDetails(browser.runtime.getManifest());
