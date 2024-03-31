@@ -9,7 +9,7 @@ Run these in two different terminals.
 - This runs `webpack` in watch mode.
 
   ```shell
-  npm run dev
+  pnpm dev
   ```
 
 - This runs `web-ext` and loads the extension in Firefox.
@@ -25,7 +25,7 @@ This will transpile the plugin and build a `zip` file for the extension.
 The `zip` will be put in `./build`.
 
 ```shell
-npm run build
+pnpm build
 ```
 
 ## Extension signing for Firefox
@@ -37,7 +37,7 @@ Credentials can be found at https://addons.mozilla.org/en-US/developers/addon/ap
 This generates an `xpi` file and it will be put in `./build`.
 
 ```shell
-npm run sign -- --api-key=$WEB_EXT_API_KEY --api-secret=$WEB_EXT_API_SECRET
+pnpm sign -- --api-key=$WEB_EXT_API_KEY --api-secret=$WEB_EXT_API_SECRET
 ```
 
 ## Useful links
