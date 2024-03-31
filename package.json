@@ -27,21 +27,29 @@
   ],
   "author": "Eric King <eric@webdeveric.com>",
   "license": "ISC",
+  "packageManager": "pnpm@8.15.5+sha256.4b4efa12490e5055d59b9b9fc9438b7d581a6b7af3b5675eb5c5f447cee1a589",
+  "prettier": "@webdeveric/prettier-config",
+  "dependencies": {
+    "@types/webextension-polyfill": "^0.10.7",
+    "webextension-polyfill": "^0.10.0"
+  },
   "devDependencies": {
-    "@types/node": "^18.7.16",
-    "@types/webextension-polyfill": "^0.10.0",
-    "@webdeveric/eslint-config-ts": "^0.6.0",
-    "@webdeveric/sync-package-version": "^0.4.2",
+    "@types/node": "^20.12.2",
+    "@webdeveric/eslint-config-ts": "^0.7.1",
+    "@webdeveric/sync-package-version": "^0.4.3",
+    "@webdeveric/prettier-config": "^0.2.0",
     "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^11.0.0",
-    "cspell": "^6.1.1",
-    "eslint": "^8.18.0",
-    "ts-loader": "^9.1.1",
-    "ts-node": "^10.2.1",
-    "typescript": "^4.7.4",
-    "web-ext": "^7.0.0",
-    "webextension-polyfill": "^0.10.0",
-    "webpack": "^5.38.0",
-    "webpack-cli": "^5.0.0"
+    "copy-webpack-plugin": "^12.0.2",
+    "cspell": "^8.6.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3",
+    "web-ext": "^7.11.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
   }
 }
